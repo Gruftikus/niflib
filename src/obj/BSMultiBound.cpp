@@ -129,4 +129,8 @@ std::list<NiObject *> BSMultiBound::GetPtrs() const {
 
 //--BEGIN MISC CUSTOM CODE--//
 
+void BSMultiBound::SetData( BSMultiBoundData * n ) {
+	data = n;
+}
+
 //--END CUSTOM CODE--//

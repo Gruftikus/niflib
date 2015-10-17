@@ -60,6 +60,8 @@ public:
 
 	//--BEGIN MISC CUSTOM CODE--//
 
+	NIFLIB_API void SetMultiBound( BSMultiBound * n );
+
 	//--END CUSTOM CODE--//
 protected:
 	/*! Unknown. */
