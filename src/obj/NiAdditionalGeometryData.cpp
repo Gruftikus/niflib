@@ -253,4 +253,18 @@ std::list<NiObject *> NiAdditionalGeometryData::GetPtrs() const {
 
 //--BEGIN MISC CUSTOM CODE--//
 
+void NiAdditionalGeometryData::SetNumVertices( unsigned short value ) {
+	numVertices = value;
+}
+
+void NiAdditionalGeometryData::SetDataInfo( const vector<AdditionalDataInfo >& value ) {
+	blockInfos = value;
+	numBlockInfos = (unsigned int)(value.size());
+}
+
+void NiAdditionalGeometryData::SetDataBlock( const vector<AdditionalDataBlock >& value ) {
+	blocks = value;
+	numBlocks = value.size();
+}
+
 //--END CUSTOM CODE--//

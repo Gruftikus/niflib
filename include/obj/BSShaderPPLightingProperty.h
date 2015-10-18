@@ -68,6 +68,18 @@ public:
 	// \param[in] value The new value.
 	void SetTextureSet( Ref<BSShaderTextureSet > value );
 
+	// Unkown
+	// \param[in] value The new value.
+	void SetUnknownFloat2( float value );
+
+	// Unkown
+	// \param[in] value The new value.
+	void SetUnknownFloat4( float value );
+
+	// Unkown
+	// \param[in] value The new value.
+	void SetUnknownFloat5( float value );
+
 	//--END CUSTOM CODE--//
 protected:
 	/*! Texture Set */

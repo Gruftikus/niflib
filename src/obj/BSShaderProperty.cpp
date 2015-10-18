@@ -155,4 +155,8 @@ void BSShaderProperty::SetEnvmapScale( float value ) {
    envmapScale = value;
 }
 
+void BSShaderProperty::SetUnknownInt2( int value ) {
+	unknownInt2 = value;
+}
+
 //--END CUSTOM CODE--//

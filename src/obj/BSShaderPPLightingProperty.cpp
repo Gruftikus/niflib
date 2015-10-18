@@ -164,4 +164,16 @@ void BSShaderPPLightingProperty::SetTextureSet( Ref<BSShaderTextureSet > value )
 	textureSet = value;
 }
 
+void BSShaderPPLightingProperty::SetUnknownFloat2( float value ) {
+	unknownFloat2 = value;
+}
+
+void BSShaderPPLightingProperty::SetUnknownFloat4( float value ) {
+	unknownFloat4 = value;
+}
+
+void BSShaderPPLightingProperty::SetUnknownFloat5( float value ) {
+	unknownFloat5 = value;
+}
+
 //--END CUSTOM CODE--//

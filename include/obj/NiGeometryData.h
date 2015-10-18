@@ -257,6 +257,8 @@ public:
 
    NIFLIB_API SkyrimHavokMaterial GetSkyrimMaterial() const;
 
+   NIFLIB_API void SetAdditionalGeometryData(const Ref<AbstractAdditionalGeometryData> data);
+
 private:
    unsigned short numUvSetsCalc(const NifInfo &) const;
    unsigned short bsNumUvSetsCalc(const NifInfo &) const;

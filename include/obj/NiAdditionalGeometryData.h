@@ -59,6 +59,12 @@ public:
 
 	//--BEGIN MISC CUSTOM CODE--//
 
+	NIFLIB_API void SetNumVertices( unsigned short value );
+
+	NIFLIB_API void SetDataInfo( const vector<AdditionalDataInfo >& value );
+
+	NIFLIB_API void SetDataBlock( const vector<AdditionalDataBlock >& value );
+
 	//--END CUSTOM CODE--//
 protected:
 	/*! Number of vertices */

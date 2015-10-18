@@ -728,4 +728,9 @@ unsigned short NiGeometryData::bsNumUvSetsCalc(const NifInfo & info) const {
 SkyrimHavokMaterial NiGeometryData::GetSkyrimMaterial() const {
 	return skyrimMaterial;
 }
+
+void NiGeometryData::SetAdditionalGeometryData(const Ref<AbstractAdditionalGeometryData> data) {
+	additionalData = data;
+}
+
 //--END CUSTOM CODE--//
