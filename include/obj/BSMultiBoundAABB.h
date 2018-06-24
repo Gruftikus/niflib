@@ -55,6 +55,8 @@ public:
 
 	//--BEGIN MISC CUSTOM CODE--//
 
+	NIFLIB_API void SetAABB(Vector3 const & _position, Vector3 const & extent);
+
 	//--END CUSTOM CODE--//
 protected:
 	/*! Position of the AABB's center */

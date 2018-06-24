@@ -9,7 +9,7 @@ All rights reserved.  Please see niflib.h for license. */
 using namespace Niflib;
 
 //Constructor
-BSSegment::BSSegment() : internalIndex((int)0), flags((BSSegmentFlags)0), unknownByte1((byte)0) {};
+BSSegment::BSSegment() : offset((int)0), count((int)0), unknownByte1((byte)0) {};
 
 //Copy Constructor
 BSSegment::BSSegment( const BSSegment & src ) {
@@ -18,8 +18,8 @@ BSSegment::BSSegment( const BSSegment & src ) {
 
 //Copy Operator
 BSSegment & BSSegment::operator=( const BSSegment & src ) {
-	this->internalIndex = src.internalIndex;
-	this->flags = src.flags;
+	this->offset = src.offset;
+	this->count = src.count;
 	this->unknownByte1 = src.unknownByte1;
 	return *this;
 };

@@ -507,7 +507,7 @@ static void CalcCenteredSphere(const vector<Vector3>& vertices, Vector3& center,
 	for (size_t i=0; i<nv; ++i){
 		Vector3 diff = vertices[ i ] - center;
 		float mag = diff.Magnitude();
-		radius = max(radius, mag);
+		radius = fmax(radius, mag);
 	}
 }
 
@@ -728,4 +728,9 @@ unsigned short NiGeometryData::bsNumUvSetsCalc(const NifInfo & info) const {
 SkyrimHavokMaterial NiGeometryData::GetSkyrimMaterial() const {
 	return skyrimMaterial;
 }
+
+void NiGeometryData::SetAdditionalGeometryData(const Ref<AbstractAdditionalGeometryData> data) {
+	additionalData = data;
+}
+
 //--END CUSTOM CODE--//

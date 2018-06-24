@@ -110,4 +110,9 @@ std::list<NiObject *> BSMultiBoundAABB::GetPtrs() const {
 
 //--BEGIN MISC CUSTOM CODE--//
 
+void BSMultiBoundAABB::SetAABB(Vector3 const & _position, Vector3 const & _extent) {
+	position = _position;
+	extent   = _extent;
+}
+
 //--END CUSTOM CODE--//

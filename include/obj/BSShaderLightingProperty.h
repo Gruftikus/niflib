@@ -55,6 +55,8 @@ public:
 
 	//--BEGIN MISC CUSTOM CODE--//
 
+	void SetUnknownInt3( int value );
+
 	//--END CUSTOM CODE--//
 protected:
 	/*! Unknown */

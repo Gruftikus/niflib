@@ -257,6 +257,16 @@ public:
 
    NIFLIB_API SkyrimHavokMaterial GetSkyrimMaterial() const;
 
+   NIFLIB_API void SetAdditionalGeometryData(const Ref<AbstractAdditionalGeometryData> data);
+
+   NIFLIB_API void SetCenter(const Vector3 value ) {
+	   center = value;
+   };
+
+	NIFLIB_API void SetRadius(const float value ) {
+	   radius = value;
+   };
+
 private:
    unsigned short numUvSetsCalc(const NifInfo &) const;
    unsigned short bsNumUvSetsCalc(const NifInfo &) const;

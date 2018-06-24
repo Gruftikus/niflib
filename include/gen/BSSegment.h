@@ -23,14 +23,16 @@ struct BSSegment {
 	NIFLIB_API BSSegment( const BSSegment & src );
 	/*! Copy Operator */
 	NIFLIB_API BSSegment & operator=( const BSSegment & src );
-	/*! Index multiplied by 1536 (0x0600) */
-	int internalIndex;
-	/*! Geometry present in the segment */
-	BSSegmentFlags flags;
-	/*! Unknown */
-	byte unknownByte1;
+		
 	//--BEGIN MISC CUSTOM CODE--//
 
+	//change, see: https://github.com/niftools/nifxml/pull/42/files
+	/*! Unknown. */
+	byte unknownByte1;
+	/*! Offset of first triangle point of this Segment. Divide this value by 3 to get index of first Triangle in Triangles array of NiTriShapeData. */
+	int offset;
+	/*! The number of triangles in this Segment. Value 0 mean empty Segment. */
+	int count;
 	//--END CUSTOM CODE--//
 };
 

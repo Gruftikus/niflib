@@ -50,9 +50,9 @@ void BSSegmentedTriShape::Read( istream& in, list<unsigned int> & link_stack, co
 	NifStream( numSegments, in, info );
 	segment.resize(numSegments);
 	for (unsigned int i1 = 0; i1 < segment.size(); i1++) {
-		NifStream( segment[i1].internalIndex, in, info );
-		NifStream( segment[i1].flags, in, info );
 		NifStream( segment[i1].unknownByte1, in, info );
+		NifStream( segment[i1].offset, in, info );
+		NifStream( segment[i1].count, in, info );	
 	};
 
 	//--BEGIN POST-READ CUSTOM CODE--//
@@ -69,9 +69,9 @@ void BSSegmentedTriShape::Write( ostream& out, const map<NiObjectRef,unsigned in
 	numSegments = (int)(segment.size());
 	NifStream( numSegments, out, info );
 	for (unsigned int i1 = 0; i1 < segment.size(); i1++) {
-		NifStream( segment[i1].internalIndex, out, info );
-		NifStream( segment[i1].flags, out, info );
 		NifStream( segment[i1].unknownByte1, out, info );
+		NifStream( segment[i1].offset, out, info );
+		NifStream( segment[i1].count, out, info );		
 	};
 
 	//--BEGIN POST-WRITE CUSTOM CODE--//
@@ -95,8 +95,8 @@ std::string BSSegmentedTriShape::asString( bool verbose ) const {
 			out << "<Data Truncated. Use verbose mode to see complete listing.>" << endl;
 			break;
 		};
-		out << "    Internal index:  " << segment[i1].internalIndex << endl;
-		out << "    Flags:  " << segment[i1].flags << endl;
+		out << "    Offset:  " << segment[i1].offset << endl;
+		out << "    Count:  " << segment[i1].count << endl;
 		out << "    Unknown Byte 1:  " << segment[i1].unknownByte1 << endl;
 	};
 	return out.str();

@@ -88,6 +88,10 @@ public:
    // \param[in] value The new value.
    void SetEnvmapScale( float value );
 
+   // Unknown
+   // \param[in] value The new value.
+   void SetUnknownInt2( int value );
+
 	//--END CUSTOM CODE--//
 protected:
 	/*! Unknown */

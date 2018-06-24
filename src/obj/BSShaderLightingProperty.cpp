@@ -111,4 +111,8 @@ std::list<NiObject *> BSShaderLightingProperty::GetPtrs() const {
 
 //--BEGIN MISC CUSTOM CODE--//
 
+void BSShaderLightingProperty::SetUnknownInt3( int value ) {
+	unknownInt3 = value;
+}
+
 //--END CUSTOM CODE--//

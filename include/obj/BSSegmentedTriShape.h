@@ -59,7 +59,7 @@ public:
 	//--BEGIN MISC CUSTOM CODE--//
 
 	//--END CUSTOM CODE--//
-protected:
+//protected:
 	/*! Number of segments in the square grid */
 	mutable int numSegments;
 	/*! Configuration of each segment */
